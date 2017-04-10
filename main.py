@@ -111,11 +111,12 @@ class SearchMessageHandler(BaseHandler):
     def post(self):
         messages = Message.query().fetch()
         search = self.request.get("search")
+        search = search.lower()
         result_list = []
         text = self.request.get("text")
         if text:
             for message in messages:
-                index_position = message.message_text.find(search)
+                index_position = message.message_text.lower().find(search)
                 if index_position > -1:
                     result_list.append(message)
         date = self.request.get("date")
@@ -134,7 +135,7 @@ class SearchMessageHandler(BaseHandler):
                     result_list.append(message)
         else:
             for message in messages:
-                index_position = message.message_text.find(search)
+                index_position = message.message_text.lower().find(search)
                 if index_position > -1:
                     result_list.append(message)
         params = {"result_list": result_list}
