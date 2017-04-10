@@ -1,0 +1,42 @@
+.margin-right-left{
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+body{
+  margin-bottom: 70px;
+}
+
+.page-header {
+  margin-top: 0;
+}
+.panel-body {
+  padding-top: 0;
+}
+
+.featuredimg{
+  margin-bottom: 15px;
+}
+
+.margin-center{
+    display: inline-block;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.average_rating{
+    border: 2px solid yellow;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 100%;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}

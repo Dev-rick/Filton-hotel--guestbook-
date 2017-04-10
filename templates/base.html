@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Filton-hotel" content="Guestbook" />
+        <meta name="author" content="Rick Warling"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock title %}</title>
+                <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- JavaScript files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="/assets/style.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Filton Hotel</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeaderCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> <!--navbar-header-->
+                <div class="collapse navbar-collapse" id="navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="#contact" data-toggle="modal">Give us feedback!</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/message-list" data-toggle="new">Message list</a></li>
+                    </ul>
+                </div><!--nav_items-->
+            </div><!--container-fluid-->
+        </nav>
+        <footer class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text pull-left">Site built by Rick W.</p>
+                <a href="https://github.com/Userrick" class="navbar-btn btn btn-info pull-right">Follow on Github!</a>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="contact" role="dialog">
+            <div class="modal-dialog" >
+                <div class="modal-content">
+                    <form method="post" action="/result" class="form-horizontal">
+                        <div class="modal-header">
+                            <h4>Give us feedback!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">Name:</label>
+                                <div class="col-sm-10"> <!--=text-box-->
+                                    <input name="author" type="text" class="form-control" id="contact-name" placeholder="Full Name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="col-sm-2 control-label">Email:</label>
+                                <div class="col-sm-10"> <!--=text-box-->
+                                    <input name="email" type="email" class="form-control" id="contact-email" placeholder="you@example.com" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="col-sm-2 control-label">Message*:</label>
+                                <div class="col-sm-10"> <!--=text-box-->
+                                    <textarea name="some_text" class="form-control" rows="8" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-rate" class="col-sm-2 control-label">Rate us!*</label>
+                                <div class="col-sm-13">
+                                    <label class="radio-inline">
+                                      <input type="checkbox" name="bad" id="inlineRadio1" value="option1"> Bad
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="checkbox" name="not_special" id="inlineRadio1" value="option1"> Not special
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="checkbox" name="good" id="inlineRadio1" value="option1"> Good
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="checkbox" name="very_good" id="inlineRadio1" value="option1"> Very Good
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="checkbox" name="excellent" id="inlineRadio1" value="option1"> Excellent
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="modal-footer">
+                            <p>*mandatory</p>
+                            <a class="btn btn-default"  data-dismiss="modal">Close</a>
+                            <button class="btn btn-primary"  type="submit">Send</button>
+
+                        </footer>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% block page_content %}
+        {% endblock page_content %}
+    </body>
+</html>

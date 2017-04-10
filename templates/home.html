@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block page_content %}
+
+
+<section class="container">
+    <div class="jumbotron text-center img-center">
+        <h1 class="underline">Filton Hotel</h1>
+        <div class="average_rating">
+            <h4 class="underline">Average rating:</h4>
+            <h3>{{average_rating}}</h3>
+        </div>
+        <p>Urlaub in Österreich: Entdecken Sie das Land der majestätischen, schneebedeckten Gipfel und der üppigen Almwiesen. Entdecken Sie auf Ihrem Urlaub in Österreich eine Welt der Gegensätze: Auf der einen Seite das urbane Flair Wiens, auf der anderen Seite das malerische UNESCO Weltkulturerbe Wachautal mit den eindrucksvollen Riesling-Weinbergen, durch die sich die Donau schlängelt.</p>
+        <div class="container-fluid margin-center">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                     <div class="item active">
+                         <img src="http://www3.hilton.com/resources/media/hi/GDNHGHI/en_US/img/shared/full_page_image_gallery/main/HL_exterior003_675x359_FitToBoxSmallDimension_Center.jpg" alt="Hilton_image">
+                     </div>
+                <div class="item">
+                    <img src="http://www.techionix.com/wp-content/uploads/2017/01/hilton.jpg" alt="Hilton_image">
+                </div>
+                <div class="item">
+                  <img src="http://www3.hilton.com/resources/media/hi/WATHNHN/en_US/img/shared/full_page_image_gallery/main/HL_hotelexteriorview01_2_675x359_FitToBoxSmallDimension_Center.jpg "alt="Hilton_image">
+                </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container text-center">
+    <div class="row">
+        <div class="col-md-3">
+            <h3><a href="#" class="underline">Innsbruck: Kultur</a></h3>
+            <p>Bewundern Sie in Innsbruck pittoreske Kopfsteinpflasterstraßen und kleine, am Hang gelegene Kapellen oder in Wien die beeindruckenden gotischen und romanischen Kirchen. Besuchen Sie großartige Innenhöfe, charmante Plätze und weltberühmte Museen und Kunstgalerien oder erleben Sie die barocke Vielfalt Salzburgs, Geburtsort von Wolfgang Amadeus Mozart und Spielstätte des Films "The Sound of Music".
+            <p><a href="#" class="btn btn-default">See more!</a></p>
+        </div>
+         <div class="col-md-3">
+            <h3><a href="#" class="underline">Innsbruck: Sport</a></h3>
+            <p>Genießen Sie während Ihres Aufenthaltes im Filton Innsbruck einzigartige Wintersportbedingungen. Perfektionieren Sie Ihre Skikünste auf den weiß gepuderten Pisten der Tiroler Alpen oder entspannen Sie in klarer Luft unter dem blauem Himmel der farbenfrohen Olympiastadt.
+            <p><a href="#" class="btn btn-default">See more!</a></p>
+        </div>
+         <div class="col-md-3">
+            <h3><a href="#" class="underline">Wien: Kultur</a></h3>
+            <p>Nutzen Sie Ihren Urlaub in Österreich für einen Besuch der Hauptstadt. Übernachten Sie im Filton Vienna und erleben Sie das einmalig romantische Flair Wiens. Geniessen Sie den herrlichen Ausblick auf die Donau und die grüne Donauinsel im Filton Vienna Danube Waterfront. Nur wenige Schritte entfernt vom Filton Vienna Plaza laden die lebhaften Straßen der berühmten Wiener Ringstraße zum Flanieren ein.
+            <p><a href="#" class="btn btn-default">See more!</a></p>
+        </div>
+         <div class="col-md-3">
+            <h3><a href="#" class="underline">Wien: Geschäftsreise</a></h3>
+            <p>Für Geschäftsreisende empfiehlt sich das Filton Garden Inn Vienna South. In idealer Lage nahe dem Business Park Vienna, ist das Hotel mit seinen stilvollen Gästezimmern, engagierten Mitarbeitern und exzellenten Einrichtungen die perfekte Adresse für Ihre Geschäftsreise.
+             <p><a href="#" class="btn btn-default">See more!</a></p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock page_content %}
